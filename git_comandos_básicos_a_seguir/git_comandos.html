@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Comandos Git Que Deves Saber Usar</title>
+</head>
+<body>
+    <h1 class="git_comandos">COMANDOS GIT BÁSICOS MAIS USADOS POR MIM:</h1> 
+
+
+   <p> <h3>1) 	Git Clone</h3>Esse comando Git cria uma cópia exata de um repositório já existente.</p> 
+    
+   <p> <h3>2)	git merge branch (develop) </h3>  Esse código diz que, tudo que está na branch develop irá para tua branch;</p> 
+    
+    <p> <h3> 3)	git add</h3> adiciona seus arquivos modificados.</p> 
+    
+    <p> <h3>4) git commit -m "comentário"</h3>  Faz o comentário de arquivos que foram adicionados;</p> 
+    
+    <p><h3>5)	git branch</h3> 
+        
+       <h4>5.1)	git branch</h4>  (lista todas as ramificações);
+       <h4>5.2)	git branch</h4>  <nome_do_branch> (cria um branch com o nome especificado); 
+       <h4>5.3)	git branch -d <nome_do_branch></nome_do_branch></h4>  (deleta o branch com o nome especificado).</p> 
+    
+    
+   <p><h4>6) 	git checkout </h4> Esse comando Git pode ser utilizado para trocar de uma ramificação para outra. <br> <br>
+        
+            Exemplo: git checkout <nome da branch>. <br> <br>
+        
+        Também é possível combinar operações, criando e fazendo o checkout de uma nova branch com um único comando: <br> <br>
+    
+        
+        Exemplo: 
+            git checkout -b <nome_do_branch_nova></p> 
+    
+    
+    
+<h1 class="git_comandos">COMANDOS GIT INTERMEDIÁRIO MAIS USADOS POR MIM:</h1> 
+    
+    
+<p> <h3>1)	git remote</h3> O comando Git remote estabelece uma conexão entre seu repositório local e um repositório remoto. <br> <br>
+    
+            Exemplo:	 git remote add (nome) <url> <br> <br>
+    
+            Crie uma nova conexão com um repositório remoto. <br>
+            Depois de adicionar um controle remoto, você poderá usá-lo ＜name＞como um atalho conveniente para ＜url＞outros comandos Git. <br> <br>
+    
+<h4>1.1) git remote rm <name> </h4> Remova a conexão com o repositório remoto chamado ＜name＞. <br>
+<h4>1.2) git remote rename <old-name> <new-name> </h4> Renomeie uma conexão remota de ＜old-name＞para ＜new-name＞.</p> 
+    
+    
+<p>
+    <h3> 2)	git fetch </h3>   Quando você precisa baixar as mudanças criadas por outros membros do seu projeto colaborativo, você precisa do comando Git fetch. <br> <br>
+        A partir desse comando, você irá receber todas as informações de commits, para avaliar, antes de aplicar essas alterações na sua versão local do repositório. <br> <br>
+        
+    <h4>2.1)	git fetch <remote> </h4> Pega todos os branches do repositório. Isso também baixa todos os commits e arquivos necessários de outro repositório. <br> <br>
+    <h4>2.2)	git fetch <remote> <branch></branch></h4>  Igual ao comando acima, mas busca apenas o branch especificado. <br>
+    <h4>2.3)	git fetch --all </h4>  Um movimento de energia que busca todos os controles remotos registrados e suas ramificações. <br>
+    <h4>2.4)	git fetch --dry-run </h4>  A --dry-runopção executará uma demonstração do comando. Ele produzirá exemplos de ações que executará durante a busca, mas não os aplicará.
+</p> 
+    
+<p>	
+    <h3>3)  git stash</h3> Esse comando Git armazena temporariamente seus arquivos modificados em uma área chamada stash (“esconderijo”), sem interagir com os outros arquivos até ser necessário. <br> <br>
+    
+        <h4> 3.1) git stash list</h4> Para listar todos os seus “esconderijos”. <br>
+    <h4>3.2) git stash apply</h4>Quando for o momento de aplicar o conteúdo do stash a um branch, usamos o parâmetro “apply”.
+</p> 
+    
+    
+    
+    <p> <h3>4) git show </h3>  Quer detalhes específicos sobre um commit que o log não mostra? O comando Git show é a resposta.</p> 
+    
+    <p><h3>5)  git rm</h3>  Para remover arquivos da sua pasta, você pode utilizar o comando Git rm.
+    
+            Exemplo:
+    
+            $ git rm <nome_do_arquivo> 
+    </p>    
+
+    <h1 class="git_comandos">COMANDOS GIT AVANÇADOS MAIS USADOS POR MIM:</h1> 
+
+
+    <h3>git rebase</h3>
+
+    <p>
+        Git rebase a princípio parece fazer o mesmo que um comando git merge: ele integra dois branches em um branch único. Porém, esse comando refaz o histórico de commits, tornando-o linear. É o mais indicado para consolidar múltiplos branches. <br> 
+    </p>
+
+Exemplo: <br>
+
+ git rebase (base)
+
+<h3>git pull –rebase</h3>
+
+<p>
+    Essa é uma variação do comando pull mostrado anteriormente. A partir dessa instrução, o Git irá fazer um rebase (não um merge) depois de se utilizar um comando pull.
+</p>
+
+Exemplo: <br>
+
+git pull –rebase
+
+<h3>git cherry-pick</h3>
+<p>
+    Esse é um comando poderoso que permite selecionar qualquer commit específico de um brach e aplicá-lo a outro branch, sem precisar de uma mescla completa. A operação fica adicionada no histórico.
+</p>
+
+Exemplo: <br>
+
+$ git cherry-pick (commit-hash)
+
+<h3>git archive</h3>
+
+<p>
+    Esse comando Git combina múltiplos arquivos em um único arquivo, como se fosse um arquivo zipado. Esse pacote pode ser aberto depois e os arquivos contidos podem ser extraídos individualmente.
+</p>
+
+Exemplo: <br>
+
+$ git archive –format zip HEAD > archive-HEAD.zip
+
+<h3>git blame</h3>
+
+<p>
+    O comando “dedo-duro”, blame ajuda a determinar qual usuário realizou qual mudança em um determinado arquivo.
+</p>
+
+Exemplo: <br>
+
+$ git blame (nome_do_arquivo)
+
+<h3>git tag</h3>
+
+<p>
+    Tags são uma boa opção para marcar uma branch e evitar alteração, principalmente em releases públicos.
+</p>
+
+Exemplo: <br>
+
+$ git tag -a v1.0.0
+
+<h3> git diff</h3>
+
+<p>
+    Para comparar dois arquivos gits ou dois branches antes de passarem por um commit ou um push, é importante executar esse comando Git.
+</p>
+
+Exemplos: <br>
+
+comparando o repositório ativo com o repositório local: $ git diff HEAD <nome_do_arquivo>
+comparando duas ramificações: $ git diff (branch de origem) (branch de destino)
+
+<h3>git citool</h3>
+<p>
+    Esse comando Git oferece uma alternativa gráfica ao commit.
+</p>
+
+Exemplo: <br>
+    
+$ git citool
+
+
+<h3>Fontes:</h3> 
+
+https://www.codigofonte.com.br/artigos/top-25-comandos-do-git <br>
+https://www.atlassian.com/git/tutorials/syncing/git-fetch <br>
+https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init <br>
+https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase
+</body>
+</html>
